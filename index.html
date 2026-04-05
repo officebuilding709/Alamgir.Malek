@@ -48,25 +48,11 @@
             padding: 30px 0;
         }
 
-        /* CSS দিয়ে তৈরি লোগোর স্টাইল */
-        .css-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--text-navy);
-            position: relative;
-            text-decoration: none;
-            display: inline-block;
-            letter-spacing: -1px;
-        }
-
-        .css-logo .arrow {
-            color: var(--text-copper);
-            position: absolute;
-            font-size: 20px;
-            top: -4px;
-            right: -12px;
-            font-family: sans-serif;
+        /* আপলোড করা লোগোর স্টাইল */
+        .logo-img {
+            height: 45px; 
+            width: auto;
+            object-fit: contain;
         }
 
         nav ul {
@@ -335,8 +321,8 @@
 
     <div class="hero-wrapper">
         <header>
-            <a href="#" class="css-logo">
-                AM<span class="arrow">&#8599;</span>
+            <a href="#" class="logo-link">
+                <img src="logo.png" alt="AM Logo" class="logo-img">
             </a>
             
             <nav>

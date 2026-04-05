@@ -50,7 +50,7 @@
 
         /* আপলোড করা লোগোর স্টাইল */
         .logo-img {
-            height: 100px; 
+            height: 75px; 
             width: auto;
             object-fit: contain;
         }
@@ -59,6 +59,7 @@
             list-style: none;
             display: flex;
             gap: 30px;
+            align-items: center;
         }
 
         nav ul li a {
@@ -141,18 +142,20 @@
         }
 
         .hero-image {
-            flex: 1;
+            flex: 1.2; /* ছবির অংশটি আরেকটু বড় করা হলো */
             display: flex;
-            justify-content: center;
+            justify-content: flex-end; /* ডান সাইডে পজিশন করা হলো */
             align-items: flex-end;
             height: 100%;
         }
 
         .hero-image img {
-            max-width: 100%;
+            width: 100%;
+            max-width: 700px; /* ছবি আরও বড় হওয়ার জন্য লিমিট বাড়ানো হলো */
             height: auto;
-            max-height: 550px;
+            max-height: 750px; /* লম্বায় বড় করার জন্য লিমিট বাড়ানো হলো */
             object-fit: contain;
+            object-position: bottom right; /* নিচে এবং ডান পাশে ফিক্সড করা হলো */
             border-bottom: none;
         }
 
@@ -313,6 +316,12 @@
             }
             .bottom-section {
                 flex-direction: column;
+            }
+            .hero-image {
+                justify-content: center;
+            }
+            .hero-image img {
+                object-position: bottom center;
             }
         }
     </style>

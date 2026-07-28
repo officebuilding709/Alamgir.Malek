@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: officebuilding709/Alamgir.Malek # যেমন: rahim/my-website
+  branch: main # আপনার রিপোর মেইন ব্রাঞ্চের নাম (main বা master)
+
+media_folder: "images/uploads" # ছবি যেখানে আপলোড হবে
+public_folder: "/images/uploads" # সাইটে ছবি যে পাথ থেকে লোড হবে
+
+collections:
+  - name: "blog" # কালেকশনের ইউনিক আইডি
+    label: "Blog Posts" # ড্যাশবোর্ডে যে নাম দেখাবে
+    folder: "posts" # গিটহাব রিপোতে যে ফোল্ডারে পোস্ট সেভ হবে
+    create: true # নতুন পোস্ট তৈরি করার অনুমতি
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # ফাইলের নাম কেমন হবে
+    fields: # পোস্ট লেখার ফিল্ডসমূহ
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Featured Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
